@@ -1,5 +1,8 @@
+import React from 'react';
+import TasksContainer from '../components/TasksContainer';
+
 function Home() {
-  return <div>Welcome to Next.js!</div>;
+  return <TasksContainer />;
 }
 
 export default Home;
