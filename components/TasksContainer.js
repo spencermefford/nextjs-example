@@ -1,5 +1,6 @@
 import React from 'react';
-import gql from 'graphql-tag';
+import PropTypes from 'prop-types';
+import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 import Task from './Task';
 
@@ -16,14 +17,26 @@ class TasksContainer extends React.Component {
     }
 
     if (data.tasks) {
-      const tasks = data.tasks.map(task => <Task key={task.id} task={task} />);
-      return tasks;
+      return data.tasks.map(task => <Task key={task.id} task={task} />);
     }
-    console.log('data', data);
 
     return null;
   }
 }
+
+TasksContainer.propTypes = {
+  loading: PropTypes.bool,
+  error: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  data: PropTypes.shape({
+    tasks: PropTypes.array,
+  }),
+};
+
+TasksContainer.defaultProps = {
+  loading: false,
+  error: null,
+  data: null,
+};
 
 const TASKS_QUERY = gql`
   query Tasks {

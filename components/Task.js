@@ -8,7 +8,7 @@ const Task = (props) => {
 
 Task.propTypes = {
   task: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
 };
