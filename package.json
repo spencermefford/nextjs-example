@@ -1,0 +1,36 @@
+{
+  "name": "nextjs-example",
+  "version": "1.0.0",
+  "description": "A sample app that utilizes Next.js and Apollo",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "json-server": "^0.14.2",
+    "next": "^8.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "start-api": "json-server --watch db.json --port 3001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencermefford/nextjs-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spencermefford/nextjs-example/issues"
+  },
+  "homepage": "https://github.com/spencermefford/nextjs-example#readme"
+}
