@@ -9,5 +9,5 @@ npm i
 npm run dev 
 
 # Start the mock API
-npm start-api
+npm run start-api
 ```
